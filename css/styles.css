@@ -1,0 +1,67 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 29);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 3rem;
+    margin: 4rem;
+    text-wrap: wrap;
+}
+
+.checker {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 30rem;
+    background-color: white;
+    color: black;
+}
+
+.checker > p {
+    margin: 1rem;
+}
+
+#text-input, #check-btn {
+    padding: 0.5rem 1rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+#text-input {
+    border: 0;
+    border-bottom: 0.125rem solid purple;
+    text-align: center;
+}
+
+#check-btn {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    border: 0.1rem solid purple;
+}
+
+#result {
+    font-size: 1.25rem;
+}
+
+.hint {
+    background-color: green;
+    border-radius: 1rem;
+    max-width: 30rem;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    font-size: 1.25rem;
+    font-family: sans-serif;
+
+}
+
+.hint > i {
+    margin-right: 1rem;
+}

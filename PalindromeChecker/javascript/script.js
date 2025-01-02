@@ -9,22 +9,32 @@ const toAlphanumeric = (inputString) => {
 };
 
 // string reversal function
-const reverse = (normal) => {
-    return normal.split('').reverse().join('');
+const reverse = (str) => {
+    return str.split('').reverse().join('');
 };
 
-// check event
-checkButton.addEventListener("click", 
-    () => {
-        alphanum = toAlphanumeric(input.value.toLowerCase());
-        let output;
-        if (alphanum === reverse(alphanum)) {
-            output = `${input.value} is a palindrome.`;
-        }
-        else {
-            output = `${input.value} is not a palindrome.`;
-        }
-        result.innerHTML = output;
-        input.value = '';
+const checkPalindrome = () => {
+    const originalInput = input.value;
+
+    if (!input.value.trim()) {
+        alert("Please input a value");
+        return;
     }
-);
+
+    const alphanum = toAlphanumeric(input.value.toLowerCase());
+
+    if (alphanum === reverse(alphanum)) {
+        result.innerHTML = `${originalInput} is a palindrome`;
+    }
+    else {
+       result.innerHTML = `${originalInput} is not a palindrome`;
+    }
+
+    input.value = '';
+};
+
+input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      checkPalindrome();
+    }
+});
